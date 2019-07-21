@@ -6,17 +6,29 @@
  * @flow
  */
 
-import React from 'react';
+import React, {Fragment} from 'react';
 import {
   View,
-  Text
+  Text,
+  StatusBar
 } from 'react-native';
+import Header from './components/Header';
+import Card from './components/Card';
+import Tabs from './components/Tabs';
 
 const App = () => {
   return (
-      <View style={{flex:1, backgroundColor: '#b707b7', justifyContent: 'center', alignItems:'center'}}>
-          <Text style={{color: '#fff'}}>New Nubank app</Text>
+    <Fragment>
+       <StatusBar
+        backgroundColor="#7a2d99"
+        barStyle="light-content"
+        />
+      <View style={{flex:1, backgroundColor: '#7a2d99', alignItems: 'stretch'}}>
+          <Header/>
+          <Card/>
+          <Tabs/>
       </View>
+    </Fragment>
   );
 };
 
