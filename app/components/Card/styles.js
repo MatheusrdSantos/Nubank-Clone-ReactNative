@@ -25,3 +25,7 @@ export const Description = styled.Text`
     margin-left: 10px;
     margin-right: 10px;
 `
+
+export const Top = styled.View`
+
+`

@@ -2,12 +2,15 @@ import React from 'react';
 
 import { View } from 'react-native';
 
-import { Container, Bottom, Content, Description } from './styles';
+import { Container, Bottom, Content, Description, Top } from './styles';
 
 import Icon from 'react-native-vector-icons/MaterialCommunityIcons';
 import SimpleIcon from 'react-native-vector-icons/SimpleLineIcons';
 const Card = () => (
     <Container>
+        <Top>
+            <Icon name="coin"/>
+        </Top>
         <Content></Content>
         <Bottom>
             <Icon name="barcode" size={25}/>
