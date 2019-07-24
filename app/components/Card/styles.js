@@ -19,6 +19,8 @@ export const Bottom = styled.View`
 `
 export const Content = styled.View`
     flex-grow: 1;
+    padding: 0 25px 0 25px;
+    justify-content: center;
 `
 
 export const Description = styled.Text`
@@ -27,5 +29,24 @@ export const Description = styled.Text`
 `
 
 export const Top = styled.View`
+    padding: 20px 25px 0px 25px; 
+    flex-direction: row;
+`
 
+export const Title = styled.Text`
+    margin-left: 10px;
+    color: #878383;
+    font-size: 16px;
+    align-self: flex-end;
+    flex-grow: 1;
+`
+
+export const ContentTitle = styled.Text`
+    color: #878383;
+    font-size: 16px;
+`
+
+export const Balance = styled.Text`
+    color: #302e2e;
+    font-size: 32px;
 `
