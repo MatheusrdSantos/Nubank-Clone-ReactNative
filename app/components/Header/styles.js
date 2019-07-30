@@ -17,3 +17,7 @@ export const Container = styled.View`
     margin-top: 30px;
     align-items: center;
 `
+
+export const Code = styled.View`
+
+`

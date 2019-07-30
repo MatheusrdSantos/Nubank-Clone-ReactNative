@@ -2,10 +2,15 @@
 import styled from 'styled-components'
 
 export const Container = styled.View`
+    position: absolute;
+    top: 400px;
+    left: 0px;
+    right: 0px;
     background-color: #fff;
     height: 380px;
     margin: 30px 20px 0 20px;
     border-radius: 3px;
+    z-index: 5;
 `
 
 export const Bottom = styled.View`
