@@ -23,3 +23,18 @@ export const Code = styled.View`
     background: #FFF;
     padding: 3px;
 `
+
+export const AccountInfo = styled.View`
+    margin-top: 5px;
+    align-items: center;
+` 
+export const Description = styled.Text`
+    margin-top: 5px;
+    color: #fff;
+    font-size: 13px;
+` 
+export const Bold = styled.Text`
+    font-size: 13px;
+    font-weight: bold;
+    color: #fff;
+` 
