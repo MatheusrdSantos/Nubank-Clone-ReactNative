@@ -19,5 +19,7 @@ export const Container = styled.View`
 `
 
 export const Code = styled.View`
-
+    margin-top: 20px;
+    background: #FFF;
+    padding: 3px;
 `
