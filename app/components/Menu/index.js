@@ -4,10 +4,15 @@ import { View } from 'react-native';
 
 import ajuda from '../../assets/ajuda.png';
 import perfil from '../../assets/perfil.png';
+import nuconta from '../../assets/nuconta.png';
+import cartao from '../../assets/cartao.png';
+import app from '../../assets/app.png';
 
 import { Container, MenuItem, IconMenu, Description, Separator, SecondaryDescription, DescriptionContainer } from './styles';
 
 import Icon from 'react-native-vector-icons/SimpleLineIcons';
+
+import ButtonLogout from '../ButtonLogout/index';
 
 const Menu = () => (
     <Container>
@@ -28,17 +33,24 @@ const Menu = () => (
         </MenuItem>
         <Separator/>
         <MenuItem>
-            <IconMenu source={ajuda}/>
-            <Description>Me ajuda</Description>
+            <IconMenu source={nuconta}/>
+            <Description>Configurar NuConta</Description>
             <Icon name="arrow-right" size={12} color="#FFF"/>
         </MenuItem>
         <Separator/>
         <MenuItem>
-            <IconMenu source={ajuda}/>
-            <Description>Me ajuda</Description>
+            <IconMenu source={cartao}/>
+            <Description>Configurar Cartão</Description>
             <Icon name="arrow-right" size={12} color="#FFF"/>
         </MenuItem>
         <Separator/>
+        <MenuItem>
+            <IconMenu source={app}/>
+            <Description>Configurações do app</Description>
+            <Icon name="arrow-right" size={12} color="#FFF"/>
+        </MenuItem>
+        <Separator/>
+        <ButtonLogout/>
     </Container>
 );
 

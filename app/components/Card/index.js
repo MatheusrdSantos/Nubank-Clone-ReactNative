@@ -2,14 +2,15 @@ import React from 'react';
 
 import { View } from 'react-native';
 
-import { Container, Bottom, Content, Description, Top, Title, ContentTitle, Balance } from './styles';
+import { Container, Bottom, Content, Description, Top, Title, ContentTitle, Balance, TopIcon } from './styles';
 
 import Icon from 'react-native-vector-icons/MaterialCommunityIcons';
 import SimpleIcon from 'react-native-vector-icons/SimpleLineIcons';
+import nuconta from '../../assets/nuconta-dark.png';
 const Card = () => (
     <Container>
         <Top>
-            <Icon name="coin" size={25} color="#878383"/>
+            <TopIcon source={nuconta}/>
             <Title>NuConta</Title>
             <Icon name="eye-off-outline" size={25} color="#878383"/>
         </Top>

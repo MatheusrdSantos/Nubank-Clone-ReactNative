@@ -16,6 +16,7 @@ export const Top = styled.View`
 export const Container = styled.View`
     margin-top: 30px;
     align-items: center;
+    z-index: 3;
 `
 
 export const Code = styled.View`

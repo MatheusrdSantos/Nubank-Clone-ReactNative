@@ -3,7 +3,7 @@ import styled from 'styled-components'
 
 export const Container = styled.View`
     position: absolute;
-    top: 480px;
+    top: 80px;
     left: 0px;
     right: 0px;
     background-color: #fff;
@@ -54,4 +54,8 @@ export const ContentTitle = styled.Text`
 export const Balance = styled.Text`
     color: #302e2e;
     font-size: 32px;
+`
+
+export const TopIcon = styled.Image`
+
 `
