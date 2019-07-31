@@ -37,4 +37,6 @@ export const Bold = styled.Text`
     font-size: 13px;
     font-weight: bold;
     color: #fff;
-` 
+`
+export const IconMenu = styled.Image`
+`

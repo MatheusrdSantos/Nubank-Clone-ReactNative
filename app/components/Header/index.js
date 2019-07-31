@@ -1,13 +1,10 @@
 import React from 'react';
-
 import { View } from 'react-native';
-
 import logo from '../../assets/nu-logo.png';
-
-import { Container, Logo, Name, Top, Code, AccountInfo, Description, Bold } from './styles';
-
+import { Container, Logo, Name, Top, Code, AccountInfo, Description, Bold, IconMenu } from './styles';
 import Icon from 'react-native-vector-icons/SimpleLineIcons';
 import {QRCode} from 'react-native-custom-qr-codes';
+import Menu from '../Menu';
 const Header = () => (
     <Container>
         <Top>
@@ -27,6 +24,7 @@ const Header = () => (
             <Description>Agência <Bold>0001</Bold> </Description>
             <Description>Conta <Bold>6400501-1</Bold> </Description>
         </AccountInfo>
+        <Menu/>
     </Container>
 );
 
