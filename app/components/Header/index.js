@@ -20,9 +20,10 @@ const Header = ({translateY}) => (
           })
       }}>
             <QRCode 
-                content='https://github.com/MatheusrdSantos'
-                size={90}
+                content='github.com/MatheusrdSantos'
+                size={100}
                 color="#7a2d99"
+                padding={2}
                 />
         </Code>
         <AccountInfo
