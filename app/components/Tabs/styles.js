@@ -1,6 +1,6 @@
 import styled from 'styled-components/native';
-
-export const Container = styled.ScrollView.attrs({
+import {Animated} from 'react-native';
+export const Container = styled(Animated.ScrollView).attrs({
     horizontal: true,
     contentContainerStyle: {paddingLeft: 10, paddingRight: 20},
     showsHorizontalScrollIndicator: false,
@@ -8,7 +8,8 @@ export const Container = styled.ScrollView.attrs({
 })`
     margin-top: 20px;
     align-self: flex-end;
-    z-index: 10;
+    position: absolute;
+    bottom: 0;
 `;
 
 export const Tab = styled.View`

@@ -13,8 +13,15 @@ import pagar from '../../assets/pagar.png';
 import bloquearCartao from '../../assets/bloquear-cartao.png';
 import cartaoVirtual from '../../assets/cartao-virtual.png';
 import organizarAtalhos from '../../assets/organizar-atalhos.png';
-const Tabs = () => (
-    <Container>
+const Tabs = ({translateY}) => (
+    <Container
+    style={{
+        opacity: translateY.interpolate({
+            inputRange: [0, 200],
+            outputRange: [1, 0],
+            extrapolate: 'clamp'
+        })
+    }}>
         <Tab>
             <Icon source={indicarAmigo}/>
             <TabDescription>Indicar amigos</TabDescription>

@@ -18,8 +18,8 @@ const Menu = ({translateY}) => (
     <Container
     style={{
         opacity: translateY.interpolate({
-            inputRange: [0, 200],
-            outputRange: [0, 1],
+            inputRange: [200, 400],
+            outputRange: [0,1],
             extrapolate: 'clamp'
         })
     }}

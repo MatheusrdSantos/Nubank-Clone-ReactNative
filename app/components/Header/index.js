@@ -14,7 +14,7 @@ const Header = ({translateY}) => (
         <Icon name="arrow-down" size={15} color="#a19da1"/>
         <Code style={{
           opacity: translateY.interpolate({
-              inputRange: [0, 200],
+              inputRange: [0, 300],
               outputRange: [0, 1],
               extrapolate: 'clamp'
           })
@@ -28,7 +28,7 @@ const Header = ({translateY}) => (
         <AccountInfo
         style={{
             opacity: translateY.interpolate({
-                inputRange: [0, 200],
+                inputRange: [0, 300],
                 outputRange: [0, 1],
                 extrapolate: 'clamp'
             })

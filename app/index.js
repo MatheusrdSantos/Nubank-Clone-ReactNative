@@ -61,8 +61,8 @@ export default function App(){
                 zIndex: 5,
                 transform: [{
                   translateY: translateY.interpolate({
-                    inputRange: [-350, 0, 400],
-                    outputRange: [-35, 0, 400],
+                    inputRange: [-350, 0, 475],
+                    outputRange: [-35, 0, 475],
                     extrapolate: 'clamp'
                   })
                 }]
@@ -71,7 +71,7 @@ export default function App(){
               <Card/>
             </Animated.View>
           </PanGestureHandler>
-          <Tabs/>
+          <Tabs translateY={translateY}/>
       </View>
     </Fragment>
   );
