@@ -2,10 +2,10 @@
 import styled from 'styled-components'
 import { Animated } from 'react-native';
 export const Container = styled(Animated.View)`
-    position: absolute;
+    /*position: absolute;
     top: 80px;
     left: 0px;
-    right: 0px;
+    right: 0px;*/
     background-color: #fff;
     height: 380px;
     margin: 30px 20px 0 20px;

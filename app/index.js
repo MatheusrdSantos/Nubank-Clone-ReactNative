@@ -46,11 +46,26 @@ export default function App(){
         />
       <View style={{flex:1, backgroundColor: '#7a2d99', alignItems: 'stretch'}}>
           <Header/>
-          <PanGestureHandler>
-            <Card/>
-            {/* <View>
-              <Text>teste</Text>
-            </View> */}
+          <PanGestureHandler
+          onGestureEvent={animatedEvent}
+          onHandlerStateChange={onHandlerStateChanged}
+          >
+              
+            <Animated.View
+            style={
+              {
+                position: 'absolute',
+                top: 80,
+                left: 0,
+                right: 0,
+                zIndex: 5,
+                transform: [{
+                  translateY: translateY
+                }]
+              }
+            }>
+              <Card/>
+            </Animated.View>
           </PanGestureHandler>
           <Tabs/>
       </View>
