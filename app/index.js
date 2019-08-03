@@ -19,6 +19,7 @@ import Tabs from './components/Tabs';
 import {State, PanGestureHandler} from 'react-native-gesture-handler';
 
 export default function App(){
+  let offset = 0;
   const translateY = new Animated.Value(0);
 
   const animatedEvent = Animated.event(
@@ -35,7 +36,30 @@ export default function App(){
   );
 
   function onHandlerStateChanged(event){
+    if(event.nativeEvent.oldState == State.ACTIVE){
+      let opened = false;
+      const {translationY} = event.nativeEvent;
+      offset+=translationY;
+      translateY.setOffset(offset);
+      translateY.setValue(0);
 
+      if(translationY>=80){
+        opened = true;
+      }else{
+        translateY.setValue(offset);
+        translateY.setOffset(0);
+        offset = 0;
+      }
+      Animated.timing(translateY, {
+        toValue: opened? 475: 0,
+        timing: 200,
+        useNativeDriver: true
+      }).start(() =>{
+        offset = opened? 475:0,
+        translateY.setOffset(offset);
+        translateY.setValue(0);
+      })
+    }
   }
 
   return (
