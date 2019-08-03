@@ -20,7 +20,6 @@ export const Container = styled(Animated.View)`
 
 export const Code = styled(Animated.View)`
     margin-top: 20px;
-    padding: 3px;
 `
 
 export const AccountInfo = styled(Animated.View)`

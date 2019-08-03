@@ -3,12 +3,14 @@ import {StyleSheet, Animated} from 'react-native';
 export const Container = styled(Animated.View)`
     align-self: stretch;
     padding: 10px 25px 10px 25px;
+    margin-top: 10px;
 `
 
 export const MenuItem = styled.View`
     color: #FFF;
     flex-direction: row;
     align-items: center;
+    padding: 10px 0px 10px 0px;
 `
 
 export const IconMenu = styled.Image`
@@ -18,7 +20,6 @@ export const Separator =  styled.View`
     align-self: stretch;
     height: ${StyleSheet.hairlineWidth};
     background: rgba(218,208,208,0.66);
-    margin: 10px 0px 10px 0px;
 `
 
 export const DescriptionContainer = styled.View`

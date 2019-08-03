@@ -1,6 +1,6 @@
 import React from 'react';
 
-import { View } from 'react-native';
+import { View, TouchableNativeFeedback } from 'react-native';
 
 import ajuda from '../../assets/ajuda.png';
 import perfil from '../../assets/perfil.png';
@@ -25,38 +25,48 @@ const Menu = ({translateY}) => (
     }}
     >
         <Separator/>
-        <MenuItem>
-            <IconMenu source={ajuda}/>
-            <Description>Me ajuda</Description>
-            <Icon name="arrow-right" size={12} color="#FFF"/>
-        </MenuItem>
+        <TouchableNativeFeedback>
+            <MenuItem>
+                <IconMenu source={ajuda}/>
+                <Description>Me ajuda</Description>
+                <Icon name="arrow-right" size={12} color="#FFF"/>
+            </MenuItem>
+        </TouchableNativeFeedback>
         <Separator/>
-        <MenuItem>
-            <IconMenu source={perfil}/>
-            <DescriptionContainer>
-                <Description>Perfil</Description>
-                <SecondaryDescription>Nome de preferência, telefone, e-mail</SecondaryDescription>
-            </DescriptionContainer>
-            <Icon name="arrow-right" size={12} color="#FFF"/>
-        </MenuItem>
+        <TouchableNativeFeedback>
+            <MenuItem>
+                <IconMenu source={perfil}/>
+                <DescriptionContainer>
+                    <Description>Perfil</Description>
+                    <SecondaryDescription>Nome de preferência, telefone, e-mail</SecondaryDescription>
+                </DescriptionContainer>
+                <Icon name="arrow-right" size={12} color="#FFF"/>
+            </MenuItem>
+        </TouchableNativeFeedback>
         <Separator/>
-        <MenuItem>
-            <IconMenu source={nuconta}/>
-            <Description>Configurar NuConta</Description>
-            <Icon name="arrow-right" size={12} color="#FFF"/>
-        </MenuItem>
+        <TouchableNativeFeedback>
+            <MenuItem>
+                <IconMenu source={nuconta}/>
+                <Description>Configurar NuConta</Description>
+                <Icon name="arrow-right" size={12} color="#FFF"/>
+            </MenuItem>
+        </TouchableNativeFeedback>
         <Separator/>
-        <MenuItem>
-            <IconMenu source={cartao}/>
-            <Description>Configurar Cartão</Description>
-            <Icon name="arrow-right" size={12} color="#FFF"/>
-        </MenuItem>
+        <TouchableNativeFeedback>
+            <MenuItem>
+                <IconMenu source={cartao}/>
+                <Description>Configurar Cartão</Description>
+                <Icon name="arrow-right" size={12} color="#FFF"/>
+            </MenuItem>
+        </TouchableNativeFeedback>
         <Separator/>
-        <MenuItem>
-            <IconMenu source={app}/>
-            <Description>Configurações do app</Description>
-            <Icon name="arrow-right" size={12} color="#FFF"/>
-        </MenuItem>
+        <TouchableNativeFeedback>
+            <MenuItem>
+                <IconMenu source={app}/>
+                <Description>Configurações do app</Description>
+                <Icon name="arrow-right" size={12} color="#FFF"/>
+            </MenuItem>
+        </TouchableNativeFeedback>
         <Separator/>
         <ButtonLogout/>
     </Container>

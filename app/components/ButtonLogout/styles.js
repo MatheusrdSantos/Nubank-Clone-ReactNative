@@ -13,6 +13,7 @@ export const Button = styled.View`
     border-bottom-right-radius: 2px;
     border-bottom-left-radius: 2px;
     padding: 10px;
+    margin-top: 10px;
 `
 
 export const Description = styled.Text`

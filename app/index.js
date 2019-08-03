@@ -43,7 +43,7 @@ export default function App(){
       translateY.setOffset(offset);
       translateY.setValue(0);
 
-      if(translationY>=80){
+      if(translationY>=50){
         opened = true;
       }else{
         translateY.setValue(offset);
@@ -52,7 +52,7 @@ export default function App(){
       }
       Animated.timing(translateY, {
         toValue: opened? 475: 0,
-        timing: 200,
+        timing: 100,
         useNativeDriver: true
       }).start(() =>{
         offset = opened? 475:0,
