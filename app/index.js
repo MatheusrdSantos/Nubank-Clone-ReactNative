@@ -45,7 +45,7 @@ export default function App(){
         barStyle="light-content"
         />
       <View style={{flex:1, backgroundColor: '#7a2d99', alignItems: 'stretch'}}>
-          <Header/>
+          <Header translateY={translateY}/>
           <PanGestureHandler
           onGestureEvent={animatedEvent}
           onHandlerStateChange={onHandlerStateChanged}
@@ -60,7 +60,11 @@ export default function App(){
                 right: 0,
                 zIndex: 5,
                 transform: [{
-                  translateY: translateY
+                  translateY: translateY.interpolate({
+                    inputRange: [-350, 0, 400],
+                    outputRange: [-35, 0, 400],
+                    extrapolate: 'clamp'
+                  })
                 }]
               }
             }>

@@ -1,6 +1,6 @@
 import styled from 'styled-components/native';
-import {StyleSheet} from 'react-native';
-export const Container = styled.View`
+import {StyleSheet, Animated} from 'react-native';
+export const Container = styled(Animated.View)`
     align-self: stretch;
     padding: 10px 25px 10px 25px;
 `

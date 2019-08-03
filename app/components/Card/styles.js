@@ -10,7 +10,7 @@ export const Container = styled(Animated.View)`
     height: 380px;
     margin: 30px 20px 0 20px;
     border-radius: 3px;
-    z-index: 5;
+    
 `
 
 export const Bottom = styled.View`

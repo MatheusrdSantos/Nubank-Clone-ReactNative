@@ -5,26 +5,39 @@ import { Container, Logo, Name, Top, Code, AccountInfo, Description, Bold, IconM
 import Icon from 'react-native-vector-icons/SimpleLineIcons';
 import {QRCode} from 'react-native-custom-qr-codes';
 import Menu from '../Menu';
-const Header = () => (
+const Header = ({translateY}) => (
     <Container>
         <Top>
             <Logo source={logo}/>
             <Name>Matheus</Name>
         </Top>
         <Icon name="arrow-down" size={15} color="#a19da1"/>
-        <Code>
+        <Code style={{
+          opacity: translateY.interpolate({
+              inputRange: [0, 200],
+              outputRange: [0, 1],
+              extrapolate: 'clamp'
+          })
+      }}>
             <QRCode 
                 content='https://github.com/MatheusrdSantos'
                 size={90}
                 color="#7a2d99"
                 />
         </Code>
-        <AccountInfo>
+        <AccountInfo
+        style={{
+            opacity: translateY.interpolate({
+                inputRange: [0, 200],
+                outputRange: [0, 1],
+                extrapolate: 'clamp'
+            })
+        }}>
             <Description>Banco <Bold>260 - Nu Pagamentos S.A.</Bold> </Description>
             <Description>Agência <Bold>0001</Bold> </Description>
             <Description>Conta <Bold>6400501-1</Bold> </Description>
         </AccountInfo>
-        <Menu/>
+        <Menu translateY={translateY}/>
     </Container>
 );
 

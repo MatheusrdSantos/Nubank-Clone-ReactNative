@@ -1,5 +1,5 @@
 import styled from 'styled-components/native';
-
+import {Animated} from 'react-native';
 export const Logo = styled.Image`
     margin-right: 5px;
 `
@@ -13,19 +13,18 @@ export const Top = styled.View`
     flex-direction: row;
 `
 
-export const Container = styled.View`
+export const Container = styled(Animated.View)`
     margin-top: 30px;
     align-items: center;
-    z-index: 3;
 `
 
-export const Code = styled.View`
+export const Code = styled(Animated.View)`
     margin-top: 20px;
     background: #FFF;
     padding: 3px;
 `
 
-export const AccountInfo = styled.View`
+export const AccountInfo = styled(Animated.View)`
     margin-top: 5px;
     align-items: center;
 ` 

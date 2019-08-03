@@ -14,8 +14,16 @@ import Icon from 'react-native-vector-icons/SimpleLineIcons';
 
 import ButtonLogout from '../ButtonLogout/index';
 
-const Menu = () => (
-    <Container>
+const Menu = ({translateY}) => (
+    <Container
+    style={{
+        opacity: translateY.interpolate({
+            inputRange: [0, 200],
+            outputRange: [0, 1],
+            extrapolate: 'clamp'
+        })
+    }}
+    >
         <Separator/>
         <MenuItem>
             <IconMenu source={ajuda}/>

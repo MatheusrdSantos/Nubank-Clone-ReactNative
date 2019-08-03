@@ -8,6 +8,7 @@ export const Container = styled.ScrollView.attrs({
 })`
     margin-top: 20px;
     align-self: flex-end;
+    z-index: 10;
 `;
 
 export const Tab = styled.View`
