@@ -1,7 +1,7 @@
 
 import styled from 'styled-components'
-
-export const Container = styled.View`
+import { Animated } from 'react-native';
+export const Container = styled(Animated.View)`
     position: absolute;
     top: 80px;
     left: 0px;

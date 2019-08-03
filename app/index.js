@@ -9,14 +9,35 @@
 import React, {Fragment} from 'react';
 import {
   View,
-  Text,
-  StatusBar
+  StatusBar,
+  Animated,
+  Text
 } from 'react-native';
 import Header from './components/Header';
 import Card from './components/Card';
 import Tabs from './components/Tabs';
+import {State, PanGestureHandler} from 'react-native-gesture-handler';
 
-const App = () => {
+export default function App(){
+  const translateY = new Animated.Value(0);
+
+  const animatedEvent = Animated.event(
+    [
+      {
+        nativeEvent: {
+          translationY: translateY
+        }
+      }
+    ],
+    {
+      useNativeDriver: true
+    }
+  );
+
+  function onHandlerStateChanged(event){
+
+  }
+
   return (
     <Fragment>
        <StatusBar
@@ -25,11 +46,14 @@ const App = () => {
         />
       <View style={{flex:1, backgroundColor: '#7a2d99', alignItems: 'stretch'}}>
           <Header/>
-          <Card/>
+          <PanGestureHandler>
+            <Card/>
+            {/* <View>
+              <Text>teste</Text>
+            </View> */}
+          </PanGestureHandler>
           <Tabs/>
       </View>
     </Fragment>
   );
 };
-
-export default App;
